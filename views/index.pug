@@ -1,0 +1,13 @@
+
+h2 todoList
+a(href='/todos/create') New
+form(action="/todos", method="get")
+  input(type='text', name='q')
+  button Search
+  
+ul
+  each list in listToDo
+    li  
+      span=list.text
+      span &nbsp 
+      a(href="todos/" + list.id+'/delete') Del
